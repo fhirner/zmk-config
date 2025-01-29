@@ -13,5 +13,7 @@
     };
 };
 
-/delete-node/ &default_kscan;   // only required if the dongle uses a 
-                                // different board than the peripherals
+// FIXME: move these out of the dtsi
+/delete-node/ &kscan0;
+/delete-node/ &left_encoder;
+/delete-node/ &sensors;
