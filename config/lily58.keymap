@@ -26,7 +26,7 @@
 		AM(de_o, AM DE o, &kp O, &kp DE_O_UMLAUT)
 		AM(de_u, AM DE u, &kp U, &kp DE_U_UMLAUT)
 		AM(de_s, AM DE s, &kp S, &kp DE_ESZETT)
-	}
+	};
 
 	keymap {
 		compatible = "zmk,keymap";
