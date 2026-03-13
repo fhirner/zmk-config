@@ -17,16 +17,17 @@
         #binding-cells = <0>;                   \
         bindings = <TAP>, <SHIFTED>;            \
         mods = <(MOD_LALT|MOD_RALT)>;           \
+        keep-mods = <(MOD_RALT)>                \
         display-name = #DISPLAY_NAME;           \
     };
 
 / {
-//	mod-morph {
-//		AM(de_a, AM DE a, &kp A, &kp DE_A_UMLAUT)
-//		AM(de_o, AM DE o, &kp O, &kp DE_O_UMLAUT)
-//		AM(de_u, AM DE u, &kp U, &kp DE_U_UMLAUT)
-//		AM(de_s, AM DE s, &kp S, &kp DE_ESZETT)
-//	};
+	mod-morph {
+		AM(A_UMLAUT, A_UMLAUT, &kp A, &kp EN_A_UMLAUT)
+		AM(O_UMLAUT, O_UMLAUT, &kp O, &kp EN_O_UMLAUT)
+		AM(U_UMLAUT, U_UMLAUT, &kp U, &kp EN_U_UMLAUT)
+		AM(S_ESZETT, S_ESZETT, &kp S, &kp EN_ESZETT)
+	};
 
 	keymap {
 		compatible = "zmk,keymap";
@@ -40,8 +41,8 @@
 //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE|  GUI  | ALT   |
 			bindings = <
 &kp ESC   &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                     &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp MINUS
-&kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &kp EN_U_UMLAUT    &kp I     &kp EN_O_UMLAUT   &kp P    &kp BSPC
-&kp LCTRL &kp EN_A_UMLAUT  &kp EN_ESZETT  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
+&kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T                      &kp Y  &U_UMLAUT    &kp I     &O_UMLAUT   &kp P    &kp BSPC
+&kp LCTRL &A_UMLAUT  &S_ESZETT  &kp D    &kp F    &kp G                      &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B  &kp LBKT   &kp RBKT &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
                         &kp LALT &kp LGUI &mo 1  &kp SPACE  &kp RET  &mo 2  &kp RGUI &kp RALT
 			>;
